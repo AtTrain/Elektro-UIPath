@@ -30,6 +30,8 @@
         _accounts.Add(_currentAccount)
         FillAccountDeails()
         RefreshGrid()
+        ' Make the added row the current row
+        gridAccounts.CurrentCell = gridAccounts.Rows(gridAccounts.Rows.GetLastRow(DataGridViewElementStates.Displayed)).Cells(0)
     End Sub
 
     Private Sub FillAccountDeails()
